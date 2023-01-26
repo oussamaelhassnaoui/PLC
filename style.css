@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:'poppins',sans-serif ;
+    font-family:'poppins',sans-serif;
     box-sizing: border-box;
 }
 html{
@@ -20,8 +20,8 @@ body{
     background-size: cover;
 }
 .container{
-    padding: 10px 10%; /*padding x y*/
-
+    padding: 20px 10%; /*padding x y*/
+    margin-top: 0px;
 }
 nav{
     display: flex;
@@ -79,32 +79,47 @@ nav{
  /****************************About*********************************/
 
  #about{
-    padding: 80px 0;
+    padding: 28px 0;
     color: #d3d3d3;
-
  }
 .row{
+    padding-top: 29px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 1200px;
+    right: 40px;
  }
+
 .about-col-1{
-    flex-basis:35%;  
+    flex-basis: 47%;
+    margin-top: 30px;
  }
 .about-col-1 img{
     width: 100%;
-    border-radius: 15px;
+    right: 25%;
+    border-radius: 24px;
  }
 .about-col-2{
-    flex-basis: 60%;
+    flex-basis: 50%;
+ }
+ .skillsall{
+    margin: 15px 20px;
+    padding: 10px;
+
+ }
+ .sub-title1{
+    padding-top: 169px;
+    color: aliceblue;
  }
 .sub-title{
-    margin: 17px -16px;
+    
+    margin: 21px 3px;
     font-weight:600;
     color: aliceblue;
  }
 .pwrite {
-    margin: 17px -16px;
+    margin: 17px -3px;
 }
 .tab-titles{
     display: flex;
@@ -144,15 +159,19 @@ nav{
 .tab-contents.active-tab{
     display: block;
  }
+
+.tab-contents a{
+    color: #d3d3d3;
+ }
 /*******************************services***********************************/
 #services{
-    padding: 30px 0;
+    padding: 1px 0;
 }
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin: 50px;
+    margin: 3px;
 }
 .services-list div{
     background: #262626;
@@ -178,6 +197,10 @@ nav{
     margin-top: 20px;
     display: inline-block;
 }
+.services-paragraph{
+    font-size: 16px;
+    
+}
 .services-list div:hover{
     background: #1388f68f;
     transform:translateY(-10px);
@@ -185,13 +208,14 @@ nav{
 /*****************************portfolio****************************************/
 #portfolio{
     padding: 50px 0;
-
+    margin-top: -144px;
+    margin-block-end: -142px;
 }
 .projects-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .projet{
     border-radius: 10px;
@@ -252,10 +276,10 @@ nav{
 }
 .btn{
     display: block;
-    margin: 50px auto;
+    margin: 30px auto;
     width: fit-content;
     border: 1px solid #0099ff;
-    padding: 14px 50px;
+    padding: 14px 40px;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
@@ -264,6 +288,10 @@ nav{
 .btn:hover{
     background: #41b3ffe0;
 }
+.emaill{
+    color:rgb(145 145 145);
+} 
+
 /***************************************contact********************************************/
 .contact-left{
     flex-basis: 35%;
@@ -319,6 +347,13 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
+.contactc{
+    padding-top: 160px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+ }
 .copyright{
     width: 100%;
     text-align: center;
@@ -336,6 +371,12 @@ nav .fa-solid{
     #header{
       background-image: url(images/phone-background.png);
     }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 300px;
+        right: 100px;}
     .header-text{
        margin-top: 100%;
        font-size: 16px; 
@@ -404,4 +445,3 @@ nav .fa-solid{
     display: block;
 
 }
-
