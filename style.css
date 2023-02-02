@@ -101,7 +101,7 @@ nav{
     border-radius: 24px;
  }
 .about-col-2{
-    flex-basis: 50%;
+    flex-basis: 100%;
  }
  .skillsall{
     margin: 15px 20px;
@@ -126,7 +126,7 @@ nav{
     margin: 20px 0 40px;
 }
 .tab-links {
-    margin-right:50px;
+    margin-right:303px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
@@ -159,6 +159,11 @@ nav{
 .tab-contents.active-tab{
     display: block;
  }
+ .tab-contents.active-tab ul{
+    margin: 0px 332px;
+    margin-top: 65px;
+ }
+
 
 .tab-contents a{
     color: #d3d3d3;
@@ -428,6 +433,13 @@ nav .fa-solid{
    .about-col-2{
     font-size: 14px;
    }
+   .about-col-2{
+    flex-basis: 50%;
+   }
+   .skillsall{
+    margin: 15px 20px;
+    padding: 10px;
+   }
    .tab-links{
     font-size: 16px;
     margin-right: 20px;
@@ -438,11 +450,13 @@ nav .fa-solid{
    .copyright{
     font-size: 14px;
    }
+   .tab-contents.active-tab ul{
+    margin: 0px 0px;
+    margin-top:0px;
+ }
 }
 #msg{
     color: #00253e;
     margin-top: -10px;
     display: block;
-
 }
-
