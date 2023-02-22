@@ -1,4 +1,3 @@
- 
 *{
     margin: 0;
     padding: 0;
@@ -31,7 +30,7 @@ nav{
 }
 
 .logo{
-    width: 260px;   
+    width: 209px;   
  }
 
  nav ul li {
@@ -159,9 +158,17 @@ nav{
 .tab-contents.active-tab{
     display: block;
  }
- .tab-contents.active-tab ul{
-    margin: 0px 332px;
-    margin-top: 65px;
+ .skil{
+    margin: 0px -2px;
+    margin-top: 50px;
+ } 
+ .educ{
+    margin: 0px 343px;
+    margin-top: 50px;
+ }
+ .exp{
+    margin-left: 728px;
+    margin-top: 100px;
  }
 
 
@@ -362,7 +369,7 @@ form .btn2{
 .copyright{
     width: 100%;
     text-align: center;
-    padding: 25px;
+    padding: 13px;
     background: rgba(173, 173, 173, 0.212);
     font-weight: 300;
     margin-top: 20px;
