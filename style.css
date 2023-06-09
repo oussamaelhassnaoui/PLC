@@ -3,6 +3,7 @@
     padding: 0;
     font-family:'poppins',sans-serif;
     box-sizing: border-box;
+    
 }
 html{
     scroll-behavior: smooth;
@@ -30,7 +31,7 @@ nav{
 }
 
 .logo{
-    width: 209px;   
+    width: 260px;   
  }
 
  nav ul li {
@@ -119,13 +120,14 @@ nav{
  }
 .pwrite {
     margin: 17px -3px;
+    font-size: 20px;
 }
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
 }
 .tab-links {
-    margin-right:303px;
+    margin-right:332px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
@@ -142,7 +144,7 @@ nav{
     transition: 0.3s;
 }
 .tab-links.active-link::after{
-    width: 50%;
+    width: 98%;
 }
 .tab-contents{
     list-style: none;
@@ -158,17 +160,9 @@ nav{
 .tab-contents.active-tab{
     display: block;
  }
- .skil{
-    margin: 0px -2px;
-    margin-top: 50px;
- } 
- .educ{
-    margin: 0px 343px;
-    margin-top: 50px;
- }
- .exp{
-    margin-left: 728px;
-    margin-top: 100px;
+ .tab-contents.active-tab ul{
+    margin: 0px 332px;
+    margin-top: 65px;
  }
 
 
@@ -188,7 +182,7 @@ nav{
 .services-list div{
     background: #262626;
     padding: 40px;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 300;
     border-radius: 25px;
     transition: background 0.3s,transform 0.3s;
@@ -255,9 +249,9 @@ nav{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 18px;
+    font-size: 23px;
     transition: height 0.3s;
-    color: #000000;
+    color: #ffffff;
     font-weight: bold ;
     
 }
@@ -369,7 +363,7 @@ form .btn2{
 .copyright{
     width: 100%;
     text-align: center;
-    padding: 13px;
+    padding: 25px;
     background: rgba(173, 173, 173, 0.212);
     font-weight: 300;
     margin-top: 20px;
