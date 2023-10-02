@@ -589,6 +589,21 @@ main {
   color: var(--orange-yellow-crayola);
 }
 
+.language-switch {
+  color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+/* Style for the button in hover state */
+.language-switch:hover {
+  background-color: #0056b3;
+}
+
 /* About */
 
 .about .article-title {
@@ -1580,6 +1595,10 @@ img, ion-icon, a, button, time, span {
   left: 87px;
   top: 49px;
 }
+.language-switch {
+    
+  font-size: 12px;
+}
 
 }
 
@@ -1766,6 +1785,8 @@ img, ion-icon, a, button, time, span {
   .navbar-link {
     --fs-8: 16px;
   }
+
+
 
   .facts-list {
     grid-template-columns: repeat(3, 1fr);
@@ -2211,7 +2232,7 @@ img, ion-icon, a, button, time, span {
 
   .info-content .title {
     position: initial;
-    scale: 0.96;
+    scale: 0.92;
   }
 
   .info_more-btn {
