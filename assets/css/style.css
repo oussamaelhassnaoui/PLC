@@ -1644,6 +1644,18 @@ img, ion-icon, a, button, time, span {
   }
 
 }
+@media (max-width: 374px) {
+  .info-content {
+    margin-left: -21px;
+    margin-top: -10px;
+    scale: 0.9;
+}
+.info-content .title {
+  padding: 5px 8px;
+  margin: 4px -90px;
+}
+
+}
 
 @media (min-width: 450px) {
   .clients-item {
