@@ -170,6 +170,21 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+ const languageSwitch = document.querySelector('.language-switch');
+
+// Function to toggle between English and French URLs
+ languageSwitch.addEventListener('click', () => {
+if (languageSwitch.getAttribute('href') === 'index.html') {
+      languageSwitch.setAttribute('href', 'indexfr.html');
+      languageSwitch.textContent = 'Français';
+      } 
+else {
+       languageSwitch.setAttribute('href', 'index.html');
+       languageSwitch.textContent = 'English';
+  }
+});
+  
+
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load("particles-js", "assets/particles.json", function () {
   console.log("callback - particles.js config loaded");
