@@ -190,12 +190,12 @@ nav{
 .services-list div i{
     font-size: 50px;
     margin-bottom: 30px;
-    color: #fcfcfc;
 }
 .services-list div h2{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
+    color: #eeeeee;
 }
 .services-list div a{
     text-decoration: none;
@@ -206,6 +206,7 @@ nav{
 }
 .services-paragraph{
     font-size: 16px;
+    color: #fcfcfc;
     
 }
 .services-list div:hover{
