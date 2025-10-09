@@ -873,10 +873,8 @@ main {
 
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(211px, 1fr));
-  grid-gap: 14px;
-  margin: 3px;
-  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
 }
 .services-list div {
   background: #cce6ff87;
@@ -896,7 +894,7 @@ main {
   margin-bottom: 30px;
 }
 .services-list div h2 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   margin: 15px;
   color: #232531;
@@ -918,6 +916,11 @@ main {
   color: #f0f8ff;
 }
 
+@media (max-width: 768px) {
+  .services-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /* Testimonials */
 
@@ -1430,6 +1433,7 @@ main {
   opacity: 0;
   z-index: 1;
   transition: var(--transition-1);
+
 }
 
 .project-item>a:hover .project-item-icon-box {
@@ -1446,6 +1450,7 @@ main {
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
+
 }
 
 .project-item>a:hover img {
@@ -2251,7 +2256,7 @@ img, ion-icon, a, button, time, span {
     
 }
 .services-list {
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
     grid-gap: 12px;
 }
 
@@ -2467,4 +2472,35 @@ img, ion-icon, a, button, time, span {
   .timeline-text {
     max-width: 700px;
   }
+}
+
+/* Certificates Section */
+.certificate-img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-img:hover {
+  transform: scale(1.05);
+}
+
+.certificate-link {
+  display: block;
+  margin-top: 10px;
+}
+
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }

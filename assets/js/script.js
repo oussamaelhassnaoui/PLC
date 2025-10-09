@@ -338,6 +338,91 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Certificate Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all certificate links
+  const certificateLinks = document.querySelectorAll('.certificate-link');
+  
+  // Create modal elements
+  const certificateModal = document.createElement('div');
+  certificateModal.className = 'certificate-modal';
+  certificateModal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  `;
+  
+  const modalContent = document.createElement('div');
+  modalContent.style.cssText = `
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+  `;
+  
+  const modalImage = document.createElement('img');
+  modalImage.style.cssText = `
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+  `;
+  
+  const closeBtn = document.createElement('button');
+  closeBtn.innerHTML = '&times;';
+  closeBtn.style.cssText = `
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  `;
+  
+  // Assemble modal
+  modalContent.appendChild(modalImage);
+  modalContent.appendChild(closeBtn);
+  certificateModal.appendChild(modalContent);
+  document.body.appendChild(certificateModal);
+  
+  // Add click event to all certificate links
+  certificateLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const imgSrc = this.getAttribute('data-certificate');
+      modalImage.src = imgSrc;
+      certificateModal.style.opacity = '1';
+      certificateModal.style.visibility = 'visible';
+    });
+  });
+  
+  // Close modal when close button is clicked
+  closeBtn.addEventListener('click', function() {
+    certificateModal.style.opacity = '0';
+    certificateModal.style.visibility = 'hidden';
+  });
+  
+  // Close modal when clicking outside the image
+  certificateModal.addEventListener('click', function(e) {
+    if (e.target === certificateModal) {
+      certificateModal.style.opacity = '0';
+      certificateModal.style.visibility = 'hidden';
+    }
+  });
+});
+
 // Icon initialization
 document.addEventListener('DOMContentLoaded', function() {
   // Force reflow to ensure icons are rendered
