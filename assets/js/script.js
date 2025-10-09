@@ -200,13 +200,13 @@ particlesJS("particles-js", {
       },
     },
     color: {
-      value: "#da24fe",
+      value: "#2488fe",
     },
     shape: {
       type: "triangle",
       stroke: {
         width: 0,
-        color: "#da24fe",
+        color: "#2488fe",
       },
       polygon: {
         nb_sides: 10,
@@ -240,7 +240,7 @@ particlesJS("particles-js", {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#da24fe",
+      color: "#2488fe",
       opacity: 0.4,
       width: 1,
     },
@@ -299,4 +299,53 @@ particlesJS("particles-js", {
     },
   },
   retina_detect: true,
+});
+
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+  
+  // Check for saved theme preference - now defaults to light mode
+  const savedTheme = localStorage.getItem('theme');
+  
+  // Set initial theme - light mode is now default
+  if (savedTheme === 'dark') {
+    setDarkTheme();
+  } else {
+    setLightTheme();
+  }
+  
+  // Toggle theme when button is clicked
+  themeToggle.addEventListener('click', function() {
+    if (root.classList.contains('dark-theme')) {
+      setLightTheme();
+    } else {
+      setDarkTheme();
+    }
+  });
+  
+  function setLightTheme() {
+    root.classList.remove('dark-theme');
+    root.classList.add('light-theme');
+    localStorage.setItem('theme', 'light');
+  }
+  
+  function setDarkTheme() {
+    root.classList.remove('light-theme');
+    root.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
+// Icon initialization
+document.addEventListener('DOMContentLoaded', function() {
+  // Force reflow to ensure icons are rendered
+  const icons = document.querySelectorAll('ion-icon, .fa-solid');
+  icons.forEach(icon => {
+    // Trigger a reflow to ensure icons render properly
+    icon.style.display = 'none';
+    icon.offsetHeight; // Trigger reflow
+    icon.style.display = '';
+  });
 });

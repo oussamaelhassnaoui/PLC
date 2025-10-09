@@ -180,7 +180,7 @@ nav{
     margin: 3px;
 }
 .services-list div{
-    background: #262626;
+    background: #cce6ff87;
     padding: 40px;
     font-size: 18px;
     font-weight: 300;
@@ -458,7 +458,11 @@ nav .fa-solid{
  }
 }
 #msg{
-    color: #00253e;
+    color: var(--white-1);
     margin-top: -10px;
     display: block;
+}
+
+.dark-theme #msg {
+    color: var(--white-1);
 }
